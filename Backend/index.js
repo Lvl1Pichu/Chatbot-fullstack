@@ -5,7 +5,7 @@ const fs = require('fs');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
 // Token of your bot - keep this secure!
-const token = 'MTI2MTYyNTc2NjI2NTg4MDYxNg.GVDig3.kCoPamKzRxiYSLcPEzg87b-jfVZ023tZVPR-no';
+const token = '';
 
 // Channel ID of the channel you want to fetch messages from
 const channelId = '1099790630818959533';
