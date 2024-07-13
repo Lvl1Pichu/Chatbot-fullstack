@@ -8,7 +8,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBit
 const token = '';
 
 // Channel ID of the channel you want to fetch messages from
-const channelId = '1099790630818959533';
+const channelId = '';
 
 // Login to Discord with your client's token
 client.login(token);
