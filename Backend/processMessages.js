@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { format } = require('date-fns'); // We'll use date-fns for better date formatting
 
 // Function to replace usernames and format messages
 function processMessages(messages) {
@@ -11,7 +12,7 @@ function processMessages(messages) {
 
         // Parse the date
         const date = new Date(message.timestamp);
-        const formattedDate = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+        const formattedDate = format(date, 'yyyy-MM-dd');
 
         // Create a key based on the date and username
         const key = `${formattedDate}_${message.author}`;
@@ -54,7 +55,7 @@ function readMessagesFromFile(filePath) {
 
 // Main function
 function main() {
-    const inputFilePath = path.join(__dirname, 'processed_messages.txt');
+    const inputFilePath = path.join(__dirname, 'messages.txt');
     const outputFilePath = path.join(__dirname, 'processed_messages.txt');
 
     // Read and process the messages
